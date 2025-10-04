@@ -1,0 +1,1 @@
+import jwt from 'jsonwebtoken';const SECRET=process.env.JWT_SECRET||'change_me_super_secret_32_chars_min';const ISS='yoh-api';export const signToken=(p,o={expiresIn:'7d',issuer:ISS})=>jwt.sign(p,SECRET,o);export const verifyToken=(t)=>jwt.verify(t,SECRET,{issuer:ISS});

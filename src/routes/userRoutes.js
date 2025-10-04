@@ -1,0 +1,1 @@
+import { Router } from 'express';import { requireAuth } from '../middleware/auth.js';import { me,myProfile,myItineraries,myPayments } from '../controllers/userController.js';const r=Router();r.get('/auth/me',requireAuth,me);r.get('/profile',requireAuth,myProfile);r.get('/itineraries/mine',requireAuth,myItineraries);r.get('/payments/mine',requireAuth,myPayments);export default r;

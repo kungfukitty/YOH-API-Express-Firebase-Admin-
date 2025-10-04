@@ -1,0 +1,1 @@
+import { Router } from 'express';import { verifyCode, acceptNDA } from '../controllers/publicController.js';const r=Router();r.post('/access/verify-code',verifyCode);r.post('/nda/accept',acceptNDA);export default r;
